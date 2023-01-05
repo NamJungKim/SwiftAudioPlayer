@@ -69,7 +69,7 @@ class AudioDiskEngine: AudioEngine {
             Log.monitor("Could not load downloaded file with url: \(url)")
         }
         
-        doRepeatedly(timeInterval: 0.2) { [weak self] in
+        doRepeatedly(timeInterval: 0.01) { [weak self] in
             guard let self = self else { return }
             
             self.updateIsPlaying()
